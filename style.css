@@ -1,0 +1,613 @@
+body {
+    background: linear-gradient(to right, rgb(11, 9, 63), rgb(5, 3, 41));
+    scroll-behavior: smooth;
+    width: auto;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    color: aliceblue;
+}
+
+.l_c {
+    text-align: center;
+    font-size: 2rem;
+}
+
+/* ---------navbar---------------------------------------------------------------------------------------- */
+
+.navigation-header {
+    background: linear-gradient(to right, rgb(18, 16, 124), rgb(5, 4, 65));
+    box-shadow: 0px 0px 20px 5px rgb(96, 122, 239);
+    padding: 10px 20px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-around; /* Center the items in the nav */
+    align-items: center;
+    height: 40px; /* Set height to 40px */
+    flex-wrap: wrap; /* Allow wrapping on smaller screens */
+    padding: 0 20px; /* Add padding to the left and right of the nav */
+}
+
+.logo-container > a {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem; /* Updated font size */
+    margin: 0 15px; /* Add horizontal margin to the logo */
+}
+
+.navigation-items {
+    display: flex;
+    gap: 35px; /* Space between navigation items */
+    margin-top: -20px;
+}
+
+.navigation-items > a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 25px; /* Updated font size */
+    position: relative;
+    transition: color 0.2s ease-in-out;
+    padding: 0 15px; /* Add padding for left and right spacing */
+}
+
+.navigation-items > a:hover {
+    color: rgb(224, 186, 233); /* Change color on hover */
+    text-shadow: 1px 1px 8px rgb(242, 0, 255);
+}
+
+.navigation-items > a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 0;
+    width: 100%;
+    height: 2px;
+    background-color: rgb(224, 186, 233); /* Underline color */
+    transform: scaleX(0);
+    transform-origin: left;
+    transition: transform 0.4s ease;
+    box-shadow: 0px 0px 8px rgba(224, 186, 233, 0.6); /* Glow effect */
+    opacity: 0.8;
+}
+
+.navigation-items > a:hover::after {
+    transform: scaleX(1); /* Expands underline smoothly */
+}
+
+.hamburger {
+    display: none; /* Initially hidden */
+    cursor: pointer;
+    font-size: 24px;
+    color: white;
+}
+
+@media screen and (max-width: 768px) {
+    .navigation-items {
+        display: none; /* Hide navigation items by default */
+        flex-direction: column;
+        position: absolute;
+        top: 40px; /* Position below the header */
+        right: 0;
+        background-color: #333;
+        width: 100%;
+        padding: 10px 0; /* Padding for the dropdown */
+    }
+
+    .navigation-items.open {
+        display: flex; /* Show navigation items when open */
+    }
+
+    .hamburger {
+        display: block; /* Show hamburger icon */
+    }
+
+    nav {
+        flex-direction: column; /* Stack items vertically */
+        align-items: center; /* Center items in the column layout */
+    }
+
+    .logo-container {
+        margin-bottom: 10px; /* Space between logo and nav */
+    }
+}
+
+.name {
+    margin-left: 10px;
+    font-size: 2rem; /* Same font size as .l_c */
+    text-align: center; /* Center the text */
+}
+
+.left {
+    display: flex;
+    align-items: center; /* Center the logo and name vertically */
+    margin-left: -100px; /* Adjust as necessary */
+    margin-top: -20px;
+}
+
+/* -------------home-------------------------------------------------------------------------------- */
+.firstsection {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin: 60px 0px;
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+}
+
+.firstsection>div {
+    width: 30%;
+    min-width: 250px;
+    /* Minimum width for smaller screens */
+}
+
+.leftsection {
+    font-size: 3.3rem;
+    text-align: center;
+    /* Center text on smaller screens */
+}
+
+.rightsection img {
+    width: 95%;
+    margin: 60px -30px;
+}
+
+/* name transitions */
+.purple {
+    color: rgb(171, 53, 255);
+}
+
+.color-transition {
+    font-family: cursive;
+    font-size: 3.3rem;
+    animation: colorChange 10s ease-in-out 1s infinite forwards;
+}
+
+.color-transition::before {
+    content: attr(data-text);
+    visibility: hidden;
+}
+
+.color-transition span {
+    transition: color 0.2s ease-in-out;
+}
+
+@keyframes colorChange {
+    0% {
+        color: rgb(171, 53, 255);
+    }
+
+    16.66% {
+        color: white;
+    }
+
+    33.33% {
+        color: rgb(171, 53, 255);
+    }
+
+    50% {
+        color: white;
+    }
+
+    66.66% {
+        color: rgb(171, 53, 255);
+    }
+
+    83.33% {
+        color: white;
+    }
+
+    100% {
+        color: rgb(171, 53, 255);
+    }
+}
+
+.color-transition span:nth-child(1) {
+    animation-delay: 0.5s;
+}
+
+.color-transition span:nth-child(2) {
+    animation-delay: 0.8s;
+}
+
+.color-transition span:nth-child(3) {
+    animation-delay: 1.2s;
+}
+
+.color-transition span:nth-child(4) {
+    animation-delay: 1.5s;
+}
+
+.color-transition span:nth-child(5) {
+    animation-delay: 1.8s;
+}
+
+.color-transition span:nth-child(6) {
+    animation-delay: 2s;
+}
+
+/* element transition */
+#element {
+    color: rgb(157, 42, 239);
+}
+
+.rem {
+    margin-top: 50px;
+    font-size: 1.4rem;
+}
+
+/* ---about and skills---------------------------------------------------------------------- */
+.about-section {
+    text-align: center;
+}
+
+h2 {
+    font-size: 2rem;
+    margin-bottom: 20px;
+}
+
+.academic-details {
+    display: flex;
+    justify-content: center;
+    gap: 150px;
+    margin-top: 50px;
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+}
+
+.academic-item {
+    background: rgba(255, 255, 255, 0.1);
+    padding: 20px;
+    border-radius: 10px;
+    width: 200px;
+    text-align: center;
+    border: 2px solid rgb(0, 255, 255);
+    box-shadow: 0px 0px 20px 5px rgb(0, 128, 255);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.academic-item:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 0px 20px 8px rgba(0, 255, 255);
+}
+
+.academic-item h3 {
+    font-size: 1.2em;
+    margin-bottom: 10px;
+    color: white;
+}
+
+.academic-item p {
+    font-size: 0.9em;
+    color: white;
+}
+
+.academic-item .value {
+    font-size: 2.5em;
+    color: white;
+}
+
+/* _____________________________________________________________ */
+.secondsection {
+    text-align: center;
+    padding-top: 50px;
+}
+
+.skills-wrapper {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    padding: 20px;
+    width: 90%;
+}
+
+.skill-container {
+    display: flex;
+    align-items: center;
+    margin: 10px 20px;
+}
+
+.skill-label {
+    flex: 1;
+    text-align: right;
+    margin-right: 20px;
+    font-size: 1em;
+    color: white;
+}
+
+.percentage {
+    margin-left: 20px;
+    font-size: 1rem;
+    color: white;
+}
+
+.skill-bar-container {
+    flex: 3;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 25px;
+    overflow: hidden;
+}
+
+.skill-bar {
+    height: 7.5px;
+    width: 0%;
+    /* Start at 0 width */
+    background: linear-gradient(to bottom, aqua, rgb(0, 21, 255));
+    border-radius: 25px;
+    transition: width 2s ease-in-out;
+}
+
+/* ----projects---------------------------------------------------------------- */
+.heading {
+    text-align: center;
+    font-size: 4.5rem;
+}
+
+.services-content {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    /* Ensures equal column width */
+    justify-content: center;
+    margin: 50px 60px;
+    height: auto;
+    /* Allow height to adjust based on content */
+    gap: 2.3rem;
+}
+
+.row {
+    background-color: rgb(46, 46, 126);
+    border-radius: 20px;
+    border: 2px solid aqua;
+    box-shadow: 0px 0px 20px 0px rgb(0, 132, 255);
+    padding: 20px;
+    transition: all 0.3s ease;
+    min-width: 250px;
+    height: auto; /* Allow height to adjust based on content */
+    display: flex;
+    flex-direction: column; /* Stack image and text vertically */
+    align-items: center; /* Center items */
+    justify-content: center; /* Center items */
+    text-align: center; /* Center text */
+}
+
+.row img {
+    border-radius: 25px;
+    margin-bottom: 10px; /* Adjusted margin for spacing */
+    max-width: 100%; /* Ensures image fits within the container */
+    height: auto; /* Maintain aspect ratio */
+}
+
+.row h4 {
+    font-size: 1.5rem;
+    line-height: 1.4;
+    text-align: center;
+    word-wrap: break-word;
+    /* Allowing content to wrap onto multiple lines */
+}
+
+.row:hover {
+    transform: translateY(-5px) scale(1.04);
+    box-shadow: 0px 0px 20px 10px rgb(3, 19, 247);
+}
+
+/* ---------certificates------------------------------------------------------------------------------ */
+.fourthsection {
+    max-width: 1200px;
+    margin: auto;
+    height: auto;
+    /* Allow height to adjust based on content */
+}
+
+hr {
+    background: whitesmoke;
+    height: 1.0px;
+    margin: 50px 50px;
+}
+
+.fourthsection h1 {
+    font-size: 1.6rem;
+}
+
+.line {
+    background: white;
+    width: 4000px;
+    /* Adjusted to fit within the container */
+    height: 2px;
+    margin: 120px 0px;
+    display: flex;
+    /* Space out the vertical items */
+}
+
+.vertical {
+    height: 93px;
+    width: 1px;
+    background-color: white;
+    margin: 0px 140px;
+    /* Adjusted margin for better spacing */
+}
+
+.image-top {
+    position: relative;
+    top: -60px;
+    left: -25px;
+}
+
+.vertical-title {
+    position: relative;
+    top: 45px;
+    left: -45px;
+    width: 100px;
+    /* Adjust width to give more space for the text */
+    text-align: center;
+    /* Center align the text */
+    white-space: normal;
+    /* Allow text to wrap to the next line */
+    word-wrap: break-word;
+    /* Ensure long words break properly */
+}
+
+.scroll {
+    background: linear-gradient(to right, rgb(11, 9, 63), rgb(5, 3, 41));
+    box-shadow: 0px 0px 20px -5px rgb(0, 132, 255);
+    border: 2px solid rgb(0, 102, 255);
+    margin-top: 30px;
+    margin-left: -40px;
+    width: auto;
+    height: 350px;
+    overflow-y: hidden;
+    white-space: nowrap;
+    scrollbar-width: none;
+}
+
+.scroll::-webkit-scrollbar {
+    display: none;
+}
+
+/* ----hireme---------------------------------------------------------------------- */
+.hire {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    border: 2px solid rgb(0, 102, 255);
+    height: 150px;
+    margin: 50px 60px;
+    background-color: rgb(46, 46, 126);
+    padding: 20px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0px 0px 20px 0px rgb(0, 132, 255);
+    /* Initial box shadow */
+    flex-wrap: wrap;
+    /* Allow wrapping on smaller screens */
+}
+
+.hire h1 {
+    font-size: 2rem;
+    text-align: center;
+    /* Center text on smaller screens */
+}
+
+.hire .buttons {
+    display: flex;
+    /* gap: 20px; */
+    /* Adjust gap as needed */
+    flex-wrap: wrap;
+    /* Allow buttons to wrap */
+    justify-content: center;
+    /* Center buttons */
+}
+
+.hire .buttons .btn {
+    color: white;
+    background-color: black;
+    border: 2px solid aqua;
+    font-size: 1rem;
+    flex: 1;
+    /* Allow buttons to grow */
+    min-width: 150px;
+    /* Minimum width for buttons */
+    padding: 20px 30px;
+    /* Consistent padding */
+    transition: box-shadow 0.3s ease;
+}
+
+.hire:hover {
+    transform: scale(1.05);
+    /* Increase size on hover */
+    box-shadow: 0px 0px 20px 10px rgb(3, 19, 247);
+    /* White box shadow on hover */
+}
+
+.hire .buttons .btn:hover {
+    color: aqua;
+    box-shadow: 0px 0px 10px 5px aqua;
+    /* White box shadow on button hover */
+}
+
+/* -----footer------------------------------------------------------------------------- */
+footer {
+    background-color: rgb(12, 12, 38);
+    height: auto;
+    box-shadow: 0px 4px 20px -8px white;
+    color: white;
+    text-align: center;
+    padding: 50px 20px;
+    position: relative;
+  }
+  
+  .footer-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .footer-top h2 {
+    font-size: 28px;
+    margin-bottom: 10px;
+    letter-spacing: 1px;
+    color: #fff;
+  }
+  
+  .footer-top p {
+    font-size: 16px;
+    color: #ddd;
+    max-width: 600px;
+    margin-bottom: 30px;
+  }
+  
+  .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 60px; /* Spacing between icons */
+    margin-bottom: 30px;
+  }
+  
+  .social-icons a {
+    display: inline-block;
+    width: 35px; /* Set width of icons to 35px */
+    height: 35px; /* Set height of icons to 35px */
+    transition: transform 0.3s ease, opacity 0.3s ease;
+  }
+  
+  .social-icons .icon {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+  }
+  
+  .social-icons a:hover {
+    transform: scale(1.2);
+    opacity: 0.9;
+    /* Removed the box-shadow effect */
+  }
+  
+  .contact-number {
+    margin-top: 20px;
+    font-size: 18px;
+    color: #ddd;
+  }
+  
+  .contact-number a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+  }
+  
+  .contact-number a:hover {
+    text-decoration: underline;
+  }
+  
+  .footer-bottom {
+    position: absolute;
+    bottom: 10px;
+    font-size: 14px;
+    font-weight: 300;
+  }
+  
+  .footer-bottom p {
+    color: #aaa;
+  }
+  

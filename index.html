@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- navbar -->
+    <header class="navigation-header">
+        <nav class="menu">
+            <div class="left">
+                <img src="logo.png" height="80px" alt="Logo">
+                <div class="name">Portfolio</div>
+            </div>
+            <div class="navigation-items" id="navigation-items">
+                <a href="#home" id="scr-to-home">Home</a>
+                <a href="#about" id="scr-to-abt">About</a>
+                <a href="#projects" id="scr-to-pro">Projects</a>
+                <a href="#contact-us" id="scr-to-f">Contact Us</a>
+            </div>
+            <div class="hamburger">
+                <span id="openHam">&#9776;</span>
+                <span id="closeHam" style="display:none;">&times;</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- home -->
+    <main>
+        <section class="firstsection">
+            <div class="leftsection">
+                Hi, My name is <span class="purple color-transition">Anshul Kaushal</span>
+                <div>and I am a passionate</div>
+                <span id="element"></span>
+                <div class="rem">learning to build websites with Javascript/Nodejs/Reactjs/React Native and some other
+                    cool libraries and frameworks.</div>
+            </div>
+
+            <div class="rightsection">
+                <img src="jk.png" alt="image">
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- about and skills -->
+        <section class="about-section" id="about">
+            <div class="l_c">About me</div>
+            <div class="academic-details">
+                <div class="academic-item">
+                    <h3>Class 10</h3>
+                    <h3>Life Vision Academy</h3>
+                    <div class="value" data-target="87">0</div>
+                </div>
+                <div class="academic-item">
+                    <h3>Class 12</h3>
+                    <h3>SR Public School</h3>
+                    <div class="value" data-target="87">0</div>
+                </div>
+                <div class="academic-item">
+                    <h3>CGPA</h3>
+                    <h3>Pranveer Singh Institute of Technology</h3>
+                    <div class="value" data-target="7">0</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Skills Section -->
+        <section class="secondsection">
+            <div class="l_c">Skills</div>
+            <div class="skills-wrapper">
+                <div class="skill-container">
+                    <div class="skill-label">C/C++</div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-skill-level="80%"></div>
+                    </div>
+                    <div class="percentage">80%</div>
+                </div>
+
+                <div class="skill-container">
+                    <div class="skill-label">Java</div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-skill-level="75%"></div>
+                    </div>
+                    <div class="percentage">75%</div>
+                </div>
+
+                <div class="skill-container">
+                    <div class="skill-label">Python</div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-skill-level="90%"></div>
+                    </div>
+                    <div class="percentage">90%</div>
+                </div>
+
+                <div class="skill-container">
+                    <div class="skill-label">Web Development</div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-skill-level="90%"></div>
+                    </div>
+                    <div class="percentage">90%</div>
+                </div>
+
+                <div class="skill-container">
+                    <div class="skill-label">DBMS</div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-skill-level="80%"></div>
+                    </div>
+                    <div class="percentage">80%</div>
+                </div>
+
+                <div class="skill-container">
+                    <div class="skill-label">DSA</div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-skill-level="85%"></div>
+                    </div>
+                    <div class="percentage">85%</div>
+                </div>
+
+                <div class="skill-container">
+                    <div class="skill-label">Problem Solving</div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-skill-level="90%"></div>
+                    </div>
+                    <div class="percentage">90%</div>
+                </div>
+
+                <div class="skill-container">
+                    <div class="skill-label">English Proficiency</div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-skill-level="85%"></div>
+                    </div>
+                    <div class="percentage">85%</div>
+                </div>
+
+                <div class="skill-container">
+                    <div class="skill-label">Communication Skills</div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-skill-level=" 90%"></div>
+                    </div>
+                    <div class="percentage">90%</div>
+                </div>
+
+                <div class="skill-container">
+                    <div class="skill-label">Project Management</div>
+                    <div class="skill-bar-container">
+                        <div class="skill-bar" data-skill-level="85%"></div>
+                    </div>
+                    <div class="percentage">85%</div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- projects -->
+        <section class="thirdsection" id="projects">
+            <div class="l_c" style="margin-bottom: 20px;">Projects</div>
+            <div class="sizing">
+                <div class="services-content">
+                    <div class="row">
+                        <a href="https://anshulkaushal01.github.io/Weather-Lens/" target="_blank"><img src="weather.png" alt="Service Image" /></a> 
+                        <h4>Weather Lens</h4>
+                    </div>
+
+                    <div class="row">
+                        <a href="https://anshulkaushal01.github.io/Note-Slice/" target="_blank"><img src="notes.png" alt="Service Image" /></a> 
+                        <h4>Note Slice</h4>
+                    </div>
+
+                    <div class="row">
+                        <a href="https://anshulkaushal01.github.io/Snake-and-Apple-Game/" target="_blank"><img src="snakegame.png" alt="Service Image" /></a> 
+                        <h4>Snake and Apple Game</h4>
+                    </div>
+                    <div class="row">
+                        <a href="https://anshulkaushal01.github.io/calculator/" target="_blank"><img src="calci.jpg" alt="Service Image" /></a> 
+                        <h4>Calculator</h4>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+
+        <!-- certificates -->
+        <section class="fourthsection" id="Certif">
+            <div class="l_c">License and Certifications</div>
+
+            <center>
+                <div class="scroll" title="click on icon to open certificate">
+                    <div class="line">
+                        <div class="vertical">
+                            <a href="html_cert.html" target="_blank"><img class="image-top" src="htmllogo.png"
+                                    height="50px" title="click on icon to open certificate"></a>
+                            <div class="vertical-title">
+                                HTML5 The Language
+                            </div>
+                        </div>
+                        <div class="vertical">
+                            <a href="css_cert.html" target="_blank"><img class="image-top" src="csslogo.png"
+                                    height="50px" title="click on icon to open certificate"></a>
+                            <div class="vertical-title">
+                                CSS3
+                            </div>
+                        </div>
+                        <div class="vertical">
+                            <a href="py1_cert.html" target="_blank"><img class="image-top" src="pylogo.png"
+                                    height="50px" title="click on icon to open certificate"></a>
+                            <div class="vertical-title">
+                                Programming Fundamentals using Python part-1
+                            </div>
+                        </div>
+                        <div class="vertical">
+                            <a href="dbms1_cert.html" target="_blank"><img class="image-top" src="dbmslogo.png"
+                                    height="50px" title="click on icon to open certificate"></a>
+                            <div class="vertical-title">
+                                Database Management System
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </center>
+        </section>
+
+        <hr>
+
+        <!-- hire me -->
+        <section class="fifthsection">
+            <div class="hire">
+                <h1 class="purple color-transition">Hire me!</h1>
+                <div class="buttons" style="flex-wrap: wrap; justify-content: center;">
+                    <!-- <button class="btn" style="flex: 1; min-width: 150px;">Get in Touch!</button> -->
+                    <button onclick="openResume()" class="btn" style="flex: 1; min-width: 150px;">Download Resume</button>
+                </div>
+            </div>
+        </section>
+
+        <hr>
+    </main>
+
+    <!-- footer -->
+    <footer id="Contact-us">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="connect-left">
+                    <h2>Connect with Me</h2>
+                    <p>Let's stay connected! Feel free to reach out to me through any of the following platforms.</p>
+                </div>
+                <div class="social-icons">
+                    <a href="mailto:anshulkaushal3103@gmail.com" target="_blank" title="Gmail">
+                        <img src="gmail_logo.png" alt="Gmail" class="icon">
+                    </a>
+                    <a href="https://www.linkedin.com/in/anshul-k-1a198031a/" target="_blank" title="LinkedIn">
+                        <img src="linkedin_logo.png" alt="LinkedIn" class="icon">
+                    </a>
+                    <a href="https://github.com/Anshulkaushal01" target="_blank" title="GitHub">
+                        <img src="github_logo.png" alt="GitHub" ```html class="icon">
+                    </a>
+                    <a href="https://www.instagram.com/_anshu.1._/" target="_blank" title="Instagram">
+                        <img src="insta_logo.png" alt="Instagram" class="icon">
+                    </a>
+                </div>
+            </div>
+            <div class="contact-number">
+                <p>Contact No: <a href="tel:+6388991514">+91-6388991514</a></p>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2024 Anshul Kaushal. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+
+    <script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
